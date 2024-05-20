@@ -10,7 +10,7 @@ import org.junit.runner.RunWith
     glue = ["testStep"],
     features = ["src/test/kotlin/BDD/"],
     plugin = ["pretty", "json:target/cucumber.json"],
-    tags = "@Login"
+    tags = "@MasterData"
 )
 
 class TestRunner : BaseSetUp()

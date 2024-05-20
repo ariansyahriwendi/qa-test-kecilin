@@ -4,9 +4,9 @@ import baseClass.BaseSetUp
 import org.openqa.selenium.By
 
 class Login : BaseSetUp() {
-    private val username = By.id("username")
-    fun username(x: String) {
-        input(username, x)
+    private val email = By.id("email")
+    fun email(x: String) {
+        input(email, x)
     }
 
     private val password = By.id("password")
@@ -14,9 +14,9 @@ class Login : BaseSetUp() {
         input(password, x)
     }
 
-    private val submit = By.ById("submit")
-    fun submit() {
-        click(submit)
+    private val login = By.ByXPath("/html/body/div/div/div/div/form/div[4]/button")
+    fun login() {
+        click(login)
     }
 
 }

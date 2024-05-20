@@ -58,6 +58,12 @@ open class BaseSetUp {
             element.sendKeys(text)
         }
 
+        fun scrollToBottom() {
+            val js = driver as JavascriptExecutor
+            js.executeScript("window.scrollTo(0, 2000);")
+        }
+
+
     }
 }
 

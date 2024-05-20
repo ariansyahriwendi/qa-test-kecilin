@@ -15,9 +15,9 @@ class LoginStep : BaseStep() {
     fun iOpenWebsite() {
     }
 
-    @And("I input username {string}")
-    fun iInputUsername(x: String) {
-        login.username(x)
+    @And("I input email {string}")
+    fun iInputEmail(x: String) {
+        login.email(x)
     }
 
     @And("I input password {string}")
@@ -25,14 +25,21 @@ class LoginStep : BaseStep() {
         login.password(x)
     }
 
-    @And("I click submit")
-    fun iClickSubmit() {
-        login.submit()
+    @And("I click login")
+    fun iClickLogin() {
+        login.login()
     }
 
     @Then("Success to login")
     fun successToLogin() {
 
+    }
+
+    @Given("Logged in")
+    fun loggedIn() {
+        login.email("akunusertest@yopmail.com")
+        login.password("Password123@")
+        login.login()
     }
 
 }
